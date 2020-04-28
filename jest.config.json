@@ -1,0 +1,30 @@
+{
+    "preset": "react-native",
+    "setupFiles": [
+      "<rootDir>/setup.js"
+    ],
+    "snapshotSerializers": ["enzyme-to-json/serializer"],
+    "transformIgnorePatterns": [
+      "node_modules/?!(react-native|native-base|@react-native-community)"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    },
+    "testMatch": ["<rootDir>/test/**/*.test.js?(x)"],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    },
+    "testPathIgnorePatterns": ["/node_modules/"],
+    "collectCoverageFrom": ["src/**/*.js"],
+    "coveragePathIgnorePatterns": ["/test/", "/node_modules/", "/src/app", "/src/reducers", "/src/store"],
+    "testEnvironment": "node",
+    "moduleFileExtensions": ["ts", "js", "json"],
+    "setupFilesAfterEnv": ["jest-extended"]
+  }
+  
